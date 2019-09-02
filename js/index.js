@@ -37,18 +37,26 @@ const siteContent = {
   },
 };
 
+// const multipleSelections = document.querySelectorAll('a');
+//console.log(multipleSelections[2]);
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //  Create selectors by using any of the DOM element's methods
+
+let navMenu = document.querySelectorAll('.container header nav a' );
+navMenu[0].textContent = 'Services' ;
+navMenu[1].textContent = 'Product' ;
+navMenu[2].textContent = 'Vision' ;
+navMenu[3].textContent = 'Features' ;
+navMenu[4].textContent = 'About' ;
+navMenu[5].textContent = 'Contact';
+
+
+
+
 //Note that IDs have been used on all images. Use the IDs to update src path content
 
-let navAll = document.querySelectorAll('a');
-let nat = document.Selector('nav');
-let cta = document.querySelector('.cta');
-let ctaText = document.querySelector('.cta-text h1');
-let button = document.querySelector('.cta-text button');
-let content = document.querySelector('.text-content');
-let contact = document.querySelector('.contact');
-let footer = document.querySelector('footer');
+let logo = document.getElementById('#logo-img src')
