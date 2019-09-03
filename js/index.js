@@ -61,8 +61,8 @@ navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
 
 let ctaSlogan = document.querySelector('.cta-text');
 
-  ctaSlogan.querySelector('h1').textContent = siteContent['cta']['h1'];
-
+  ctaSlogan.querySelector('.cta-text h1').textContent = siteContent['cta']['h1']
+  ctaSlogan.querySelector('h1').style.wordSpacing = '500px';
   ctaSlogan.querySelector('button').textContent = siteContent['cta']['button'];
 
 // update image of code snippet circle
