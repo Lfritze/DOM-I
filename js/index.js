@@ -55,12 +55,15 @@ navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
 navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
 navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
 
-let ctaSlogan = document.querySelector('.cta-text');
+
 
 //update slogan text and button
 
-ctaSlogan.querySelector('h1').textContent = siteContent['cta']['h1'];
-ctaSlogan.querySelector('button').textContent = siteContent['cta']['button'];
+let ctaSlogan = document.querySelector('.cta-text');
+
+  ctaSlogan.querySelector('h1').textContent = siteContent['cta']['h1'];
+
+  ctaSlogan.querySelector('button').textContent = siteContent['cta']['button'];
 
 // update image of code snippet circle
 
