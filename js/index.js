@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Building out navigation
 let navMenu = document.querySelectorAll('.container header nav a');
 
-// see below - information on .textContent https://www.w3schools.com/jsref/prop_node_textcontent.asp
+// information on .textContent https://www.w3schools.com/jsref/prop_node_textcontent.asp  (see below)
 
 navMenu[0].textContent = siteContent['nav']['nav-item-1'];
 navMenu[1].textContent = siteContent['nav']['nav-item-2'];
@@ -53,11 +53,20 @@ navMenu[3].textContent = siteContent['nav']['nav-item-4'];
 navMenu[4].textContent = siteContent['nav']['nav-item-5'];
 navMenu[5].textContent = siteContent['nav']['nav-item-6'];
 
-// working on slogan text and 'get started' button
-// "cta-text" from html
+// working on slogan text and 'get started' button (see below)
+// "cta-text" from html (see below)
 
 let ctaDomSlogan = document.querySelector('.cta-text');
 
-  ctaDomSlogan.querySelector('.cta-text h1 br').textContent = siteContent['cta']['h1'];
+  ctaDomSlogan.querySelector('.cta-text h1').textContent = siteContent['cta']['h1'];
   ctaDomSlogan.querySelector('h1').style.wordSpacing = '500px';
   ctaDomSlogan.querySelector('button').textContent = siteContent['cta']['button'];
+
+  // code circle image (see below)
+  // setAttribute info here: https://www.w3schools.com/jsref/met_element_setattribute.asp  (see below)
+
+  let codeCircle = document.getElementById('cta-img');
+    codeCircle.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+
