@@ -40,3 +40,24 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Building out navigation
+let navMenu = document.querySelectorAll('.container header nav a');
+
+// see below - information on .textContent https://www.w3schools.com/jsref/prop_node_textcontent.asp
+
+navMenu[0].textContent = siteContent['nav']['nav-item-1'];
+navMenu[1].textContent = siteContent['nav']['nav-item-2'];
+navMenu[2].textContent = siteContent['nav']['nav-item-3'];
+navMenu[3].textContent = siteContent['nav']['nav-item-4'];
+navMenu[4].textContent = siteContent['nav']['nav-item-5'];
+navMenu[5].textContent = siteContent['nav']['nav-item-6'];
+
+// working on slogan text and 'get started' button
+// "cta-text" from html
+
+let ctaDomSlogan = document.querySelector('.cta-text');
+
+  ctaDomSlogan.querySelector('.cta-text h1 br').textContent = siteContent['cta']['h1'];
+  ctaDomSlogan.querySelector('h1').style.wordSpacing = '500px';
+  ctaDomSlogan.querySelector('button').textContent = siteContent['cta']['button'];
