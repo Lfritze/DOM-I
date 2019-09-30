@@ -72,14 +72,39 @@ let ctaDomSlogan = document.querySelector('.cta-text');
 
 
 // Main content (see below)
+// .querySelectorAll returns array-like object (nodeList)
+// query <text-content> and children <h4> and <p> from html
 
 let mainHeadingFour = document.querySelectorAll('.text-content h4')
 let mainParagraph = document.querySelectorAll('.text-content p')
 
 
 // Features, About, Services, Product, Vision (see below)
-// using MainHeadingFour & mainParagraph
+// using MainHeadingFour & mainParagraph [array number] (see below)
 
 // Features 
 mainHeadingFour[0].textContent = siteContent['main-content']['features-h4']
 mainParagraph[0].textContent = siteContent['main-content']['features-content']
+
+//About
+mainHeadingFour[1].textContent = siteContent['main-content']['about-h4']
+mainParagraph[1].textContent = siteContent['main-content']['about-content']
+
+//Services
+mainHeadingFour[2].textContent = siteContent['main-content']['services-h4']
+mainParagraph[2].textContent = siteContent['main-content']['services-content']
+
+//Product
+mainHeadingFour[3].textContent = siteContent['main-content']['product-h4']
+mainParagraph[3].textContent = siteContent['main-content']['product-content']
+
+//Vision
+mainHeadingFour[4].textContent = siteContent['main-content']['features-h4']
+mainParagraph[4].textContent = siteContent['main-content']['vision-content']
+
+
+// middle picture (mid-page-accent.png) (see below)
+// getElementById 'middle-img'
+//setAttribute
+let midPageCodeImg = document.getElementById('middle-img');
+midPageCodeImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
