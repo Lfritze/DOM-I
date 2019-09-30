@@ -108,3 +108,18 @@ mainParagraph[4].textContent = siteContent['main-content']['vision-content']
 //setAttribute
 let midPageCodeImg = document.getElementById('middle-img');
 midPageCodeImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Contact section - address, phone, email (see below)
+
+let contactHeadingFour = document.querySelector('.contact h4');
+  contactHeadingFour.textContent = siteContent['contact']['contact-h4'];
+
+let contactParagraph = document.querySelectorAll('.contact p');
+  contactParagraph[0].textContent = siteContent['contact']['address'];
+  contactParagraph[1].textContent = siteContent['contact']['phone'];
+  contactParagraph[2].textContent = siteContent['contact']['email'];
+
+  // Footer (copyright)
+
+  let footerPart = document.querySelector('footer p');
+    footerPart.textContent = siteContent['footer']['copyright'];
