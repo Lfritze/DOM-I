@@ -55,6 +55,8 @@ navMenu[5].textContent = siteContent['nav']['nav-item-6'];
 
 // working on slogan text and 'get started' button (see below)
 // "cta-text" from html (see below)
+// added a 'hack' of 500px to stack 'DOM IS AWESOME' (see below)
+// .querySelectorAll returns array-like object (nodeList)
 
 let ctaDomSlogan = document.querySelector('.cta-text');
 
@@ -69,4 +71,15 @@ let ctaDomSlogan = document.querySelector('.cta-text');
     codeCircle.setAttribute('src', siteContent["cta"]["img-src"]);
 
 
+// Main content (see below)
 
+let mainHeadingFour = document.querySelectorAll('.text-content h4')
+let mainParagraph = document.querySelectorAll('.text-content p')
+
+
+// Features, About, Services, Product, Vision (see below)
+// using MainHeadingFour & mainParagraph
+
+// Features 
+mainHeadingFour[0].textContent = siteContent['main-content']['features-h4']
+mainParagraph[0].textContent = siteContent['main-content']['features-content']
