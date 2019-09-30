@@ -40,3 +40,114 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//********************Tasks 1 & 2*********************
+
+// Building out navigation
+let navMenu = document.querySelectorAll('.container header nav a');
+
+// information on .textContent https://www.w3schools.com/jsref/prop_node_textcontent.asp  (see below)
+
+navMenu[0].textContent = siteContent['nav']['nav-item-1'];
+navMenu[1].textContent = siteContent['nav']['nav-item-2'];
+navMenu[2].textContent = siteContent['nav']['nav-item-3'];
+navMenu[3].textContent = siteContent['nav']['nav-item-4'];
+navMenu[4].textContent = siteContent['nav']['nav-item-5'];
+navMenu[5].textContent = siteContent['nav']['nav-item-6'];
+
+// working on slogan text and 'get started' button (see below)
+// "cta-text" from html (see below)
+// added a 'hack' of 500px to stack 'DOM IS AWESOME' (see below)
+// .querySelectorAll returns array-like object (nodeList)
+
+let ctaDomSlogan = document.querySelector('.cta-text');
+
+  ctaDomSlogan.querySelector('.cta-text h1').textContent = siteContent['cta']['h1'];
+  ctaDomSlogan.querySelector('h1').style.wordSpacing = '500px';
+  ctaDomSlogan.querySelector('button').textContent = siteContent['cta']['button'];
+
+  // code circle image (see below)
+  // setAttribute info here: https://www.w3schools.com/jsref/met_element_setattribute.asp  (see below)
+
+  let codeCircle = document.getElementById('cta-img');
+    codeCircle.setAttribute('src', siteContent["cta"]["img-src"]);
+
+
+// Main content (see below)
+// .querySelectorAll returns array-like object (nodeList)
+// query <text-content> and children <h4> and <p> from html
+
+let mainHeadingFour = document.querySelectorAll('.text-content h4')
+let mainParagraph = document.querySelectorAll('.text-content p')
+
+
+// Features, About, Services, Product, Vision (see below)
+// using MainHeadingFour & mainParagraph [array number] (see below)
+
+// Features 
+mainHeadingFour[0].textContent = siteContent['main-content']['features-h4']
+mainParagraph[0].textContent = siteContent['main-content']['features-content']
+
+//About
+mainHeadingFour[1].textContent = siteContent['main-content']['about-h4']
+mainParagraph[1].textContent = siteContent['main-content']['about-content']
+
+//Services
+mainHeadingFour[2].textContent = siteContent['main-content']['services-h4']
+mainParagraph[2].textContent = siteContent['main-content']['services-content']
+
+//Product
+mainHeadingFour[3].textContent = siteContent['main-content']['product-h4']
+mainParagraph[3].textContent = siteContent['main-content']['product-content']
+
+//Vision
+mainHeadingFour[4].textContent = siteContent['main-content']['features-h4']
+mainParagraph[4].textContent = siteContent['main-content']['vision-content']
+
+
+// middle picture (mid-page-accent.png) (see below)
+// getElementById 'middle-img'
+//setAttribute
+let midPageCodeImg = document.getElementById('middle-img');
+midPageCodeImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+// Contact section - address, phone, email (see below)
+
+let contactHeadingFour = document.querySelector('.contact h4');
+  contactHeadingFour.textContent = siteContent['contact']['contact-h4'];
+
+let contactParagraph = document.querySelectorAll('.contact p');
+  contactParagraph[0].textContent = siteContent['contact']['address'];
+  contactParagraph[1].textContent = siteContent['contact']['phone'];
+  contactParagraph[2].textContent = siteContent['contact']['email'];
+
+  // Footer (copyright)
+
+  let footerPart = document.querySelector('footer p');
+    footerPart.textContent = siteContent['footer']['copyright'];
+
+//***********************TASK 3*************************************
+// [ ] Check your work by looking at the [original html](original.html) in the browser */
+
+// change navigation text to green (going to use forEach to loop through the navigation menu) (see below)
+navMenu.forEach(navMenu => {
+  navMenu.style.color='green';
+});
+
+// use .appendChild() and prepend() to add 2 new items to the navigation system. (see below)
+// I am also making the new navigation items green (style.color)(see below)
+
+let navigationAddNewItems = document.querySelector('header nav');
+
+let newItemOne = document.createElement('a')
+  newItemOne.setAttribute('href', ['https://www.peterbe.com/plog/createelement-a']);
+  newItemOne.style.color = 'green';
+  newItemOne.textContent = 'Append';
+  navigationAddNewItems.appendChild(newItemOne);
+
+  let newItemTwo = document.createElement('a')
+  newItemTwo.setAttribute('href', ['https://www.peterbe.com/plog/createelement-a']);
+  newItemTwo.style.color = 'green';
+  newItemTwo.textContent = 'Prepend'
+  navigationAddNewItems.prepend(newItemTwo);
+
