@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//********************Tasks 1 & 2*********************
+
 // Building out navigation
 let navMenu = document.querySelectorAll('.container header nav a');
 
@@ -123,3 +125,29 @@ let contactParagraph = document.querySelectorAll('.contact p');
 
   let footerPart = document.querySelector('footer p');
     footerPart.textContent = siteContent['footer']['copyright'];
+
+//***********************TASK 3*************************************
+// [ ] Check your work by looking at the [original html](original.html) in the browser */
+
+// change navigation text to green (going to use forEach to loop through the navigation menu) (see below)
+navMenu.forEach(navMenu => {
+  navMenu.style.color='green';
+});
+
+// use .appendChild() and prepend() to add 2 new items to the navigation system. (see below)
+// I am also making the new navigation items green (style.color)(see below)
+
+let navigationAddNewItems = document.querySelector('header nav');
+
+let newItemOne = document.createElement('a')
+  newItemOne.setAttribute('href', ['https://www.peterbe.com/plog/createelement-a']);
+  newItemOne.style.color = 'green';
+  newItemOne.textContent = 'Append';
+  navigationAddNewItems.appendChild(newItemOne);
+
+  let newItemTwo = document.createElement('a')
+  newItemTwo.setAttribute('href', ['https://www.peterbe.com/plog/createelement-a']);
+  newItemTwo.style.color = 'green';
+  newItemTwo.textContent = 'Prepend'
+  navigationAddNewItems.prepend(newItemTwo);
+
